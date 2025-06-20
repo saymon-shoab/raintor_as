@@ -1,9 +1,9 @@
-'use client'
+"use client";
 
-import type { IUser } from '@/types'
-import { motion } from 'framer-motion'
-import { Building, Mail, Phone, GraduationCap } from 'lucide-react'
-import Image from 'next/image'
+import type { IUser } from "@/types";
+import { motion } from "framer-motion";
+import { Building, Mail, Phone, GraduationCap } from "lucide-react";
+import Image from "next/image";
 
 const UserCard = ({ user, index }: { user: IUser; index: number }) => {
   return (
@@ -15,6 +15,8 @@ const UserCard = ({ user, index }: { user: IUser; index: number }) => {
     >
       <div className="flex items-center space-x-4 mb-4">
         <Image
+          width={64}
+          height={64}
           src={user.image}
           alt={`${user.firstName} ${user.lastName}`}
           className="w-16 h-16 rounded-full object-cover border border-gray-300 dark:border-gray-600"
@@ -48,7 +50,7 @@ const UserCard = ({ user, index }: { user: IUser; index: number }) => {
         </div>
       </div>
     </motion.div>
-  )
-}
+  );
+};
 
-export default UserCard
+export default UserCard;

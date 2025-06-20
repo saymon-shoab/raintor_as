@@ -11,7 +11,7 @@ interface UseInfiniteScrollResult {
   loadMore: () => void
 }
 
-const API_URL = 'https://tech-test.raintor.com/api/users/GetUsersList'
+// const API_URL = 'https://tech-test.raintor.com/api/users/GetUsersList'
 
 export function useInfiniteScroll(): UseInfiniteScrollResult {
   const [data, setData] = useState<IUser[]>([])
@@ -20,7 +20,7 @@ export function useInfiniteScroll(): UseInfiniteScrollResult {
   const [page, setPage] = useState(0)
   const [hasMore, setHasMore] = useState(true)
 
-  const limit = 10
+//   const limit = 10
 
   const loadMore = useCallback(async () => {
     if (loading || !hasMore) return
@@ -29,8 +29,8 @@ export function useInfiniteScroll(): UseInfiniteScrollResult {
     setError(null)
 
     try {
-      const response = await fetch(`${API_URL}?take=${limit}&skip=${page * limit}`)
-
+    //   const response = await fetch(`${API_URL}?take=${limit}&skip=${page * limit}`)
+      const response = await fetch(`/api/users?take=10&skip=0`)
       if (!response.ok) {
         throw new Error(`HTTP error: ${response.status}`)
       }

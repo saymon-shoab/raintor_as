@@ -3,6 +3,7 @@
 import type { IUser } from '@/types'
 import { motion } from 'framer-motion'
 import { Building, Mail, Phone, GraduationCap } from 'lucide-react'
+import Image from 'next/image'
 
 const UserCard = ({ user, index }: { user: IUser; index: number }) => {
   return (
@@ -13,7 +14,7 @@ const UserCard = ({ user, index }: { user: IUser; index: number }) => {
       className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 hover:shadow-md transition-shadow duration-200 p-4"
     >
       <div className="flex items-center space-x-4 mb-4">
-        <img
+        <Image
           src={user.image}
           alt={`${user.firstName} ${user.lastName}`}
           className="w-16 h-16 rounded-full object-cover border border-gray-300 dark:border-gray-600"

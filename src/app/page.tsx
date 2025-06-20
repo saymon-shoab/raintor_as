@@ -2,6 +2,7 @@
 
 import Header from "@/components/Header";
 import { PhoneIcon } from "lucide-react";
+import Link from "next/link";
 const workProcessInfo = [
   {
     title: 'Discovery',
@@ -59,12 +60,12 @@ export default function Home() {
       {/* Header Row: Title + Read More */}
       <div className="flex justify-between items-start mb-4">
         <h2 className="text-lg font-semibold text-gray-800 dark:text-white">{data.title}</h2>
-        <a
+        <Link
           href={data.href}
           className="text-blue-600 dark:text-blue-400 hover:underline font-medium text-sm whitespace-nowrap"
         >
           Read More →
-        </a>
+        </Link>
       </div>
 
       {/* Description */}
@@ -94,22 +95,22 @@ export default function Home() {
         <div>
           <h2 className="text-lg font-semibold text-gray-800 dark:text-white mb-2">Say Hello 👋</h2>
           <p className="text-gray-600 dark:text-gray-300 mb-1">We’d love to hear from you.</p>
-          <a
+          <Link
             href="tel:+8801782065131"
             className="text-blue-600 dark:text-blue-400 hover:underline font-medium"
           >
             +880 1782 065 131
-          </a>
+          </Link>
         </div>
 
         {/* Column 3: Menu */}
         <div>
           <h3 className="text-lg font-semibold text-gray-800 dark:text-white mb-2">Menu</h3>
           <ul className="space-y-2 text-gray-600 dark:text-gray-300 text-sm">
-            <li><a href="/" className="hover:text-primary transition">Home</a></li>
-            <li><a href="/about" className="hover:text-primary transition">About</a></li>
-            <li><a href="/projects" className="hover:text-primary transition">Projects</a></li>
-            <li><a href="/contact" className="hover:text-primary transition">Contact</a></li>
+            <li><Link href="/" className="hover:text-primary transition">Home</Link></li>
+            <li><Link href="/about" className="hover:text-primary transition">About</Link></li>
+            <li><Link href="/projects" className="hover:text-primary transition">Projects</Link></li>
+            <li><Link href="/contact" className="hover:text-primary transition">Contact</Link></li>
           </ul>
         </div>
 
@@ -117,9 +118,9 @@ export default function Home() {
         <div>
           <h3 className="text-lg font-semibold text-gray-800 dark:text-white mb-2">Follow Me</h3>
           <ul className="space-y-2 text-gray-600 dark:text-gray-300 text-sm">
-            <li><a href="https://github.com" target="_blank" className="hover:text-primary transition">GitHub</a></li>
-            <li><a href="https://linkedin.com" target="_blank" className="hover:text-primary transition">LinkedIn</a></li>
-            <li><a href="https://twitter.com" target="_blank" className="hover:text-primary transition">Twitter</a></li>
+            <li><Link href="https://github.com" target="_blank" className="hover:text-primary transition">GitHub</Link></li>
+            <li><Link href="https://linkedin.com" target="_blank" className="hover:text-primary transition">LinkedIn</Link></li>
+            <li><Link href="https://twitter.com" target="_blank" className="hover:text-primary transition">Twitter</Link></li>
           </ul>
         </div>
       </div>
@@ -130,9 +131,9 @@ export default function Home() {
           <span>BESNIK</span>
           <span>© devlop.me 2022</span>
           <span className="space-x-2">
-            <a href="/privacy" className="hover:underline">PRIVACY</a>
+            <Link href="/privacy" className="hover:underline">PRIVACY</Link>
             <span>-</span>
-            <a href="/terms" className="hover:underline">TERMS</a>
+            <Link href="/terms" className="hover:underline">TERMS</Link>
           </span>
         </div>
       </div>

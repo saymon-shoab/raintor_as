@@ -2,7 +2,7 @@
 
 import type { IUser } from '@/types'
 import { motion } from 'framer-motion'
-import { Building, Mail, MapPin, Phone, GraduationCap } from 'lucide-react'
+import { Building, Mail, Phone, GraduationCap } from 'lucide-react'
 
 const UserCard = ({ user, index }: { user: IUser; index: number }) => {
   return (

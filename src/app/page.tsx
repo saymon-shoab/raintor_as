@@ -1,7 +1,7 @@
 "use client";
 
 import Header from "@/components/Header";
-import { PhoneIcon, ArrowDownNarrowWideIcon } from "lucide-react";
+import { PhoneIcon } from "lucide-react";
 const workProcessInfo = [
   {
     title: 'Discovery',

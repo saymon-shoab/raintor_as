@@ -53,7 +53,7 @@ export function useInfiniteScroll(): UseInfiniteScrollResult {
 
   useEffect(() => {
     loadMore()
-  }, [2000])
+  }, [])
 
   return { data, loading, error, hasMore, loadMore }
 }
